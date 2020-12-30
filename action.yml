@@ -1,0 +1,21 @@
+name: "Action Man Github Action"
+description: "Notify Action Man Dashboard"
+inputs:
+  public_vapid_key:
+    description: "Your public VAPID key"
+    required: true
+  private_vapid_key:
+    description: "Your private VAPID key"
+    required: true
+  endpoint:
+    description: "Your endpoint"
+    required: true
+  auth:
+    description: "Your auth key"
+    required: true
+  p256dh:
+    description: "Your p256dh key"
+    required: true
+runs:
+  using: "node12"
+  main: "dist/index.js"
