@@ -1,0 +1,17 @@
+on: [push]
+
+jobs:
+  notification:
+    runs-on: ubuntu-latest
+    name: Action Notification
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Test Notification
+        uses: ./
+        with:
+          private_vapid_key: ${{ secrets.PRIVATE_VAPID_KEY }}
+          public_vapid_key: ${{ secrets.PUBLIC_VAPID_KEY }}
+          endpoint: ${{ secrets.ENDPOINT }}
+          auth: ${{ secrets.AUTH }}
+          p256dh: ${{ secrets.P256DH }}
