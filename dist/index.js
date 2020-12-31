@@ -15,13 +15,7 @@ try {
 
   const publicVapidKey = core.getInput("public_vapid_key")
   const privateVapidKey = core.getInput("private_vapid_key")
-  const subscription = {
-    endpoint: core.getInput("endpoint"),
-    keys: {
-      auth: core.getInput("auth"),
-      p256dh: core.getInput("p256dh"),
-    },
-  }
+  const subscription = core.getInput("subscription")
 
   webpush.setVapidDetails(
     "mailto:test@test.com",

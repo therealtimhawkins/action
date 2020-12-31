@@ -7,14 +7,8 @@ inputs:
   private_vapid_key:
     description: "Your private VAPID key"
     required: true
-  endpoint:
-    description: "Your endpoint"
-    required: true
-  auth:
-    description: "Your auth key"
-    required: true
-  p256dh:
-    description: "Your p256dh key"
+  subscription:
+    description: "Your subscription"
     required: true
 runs:
   using: "node12"

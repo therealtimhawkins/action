@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js"
+    "start": "node index.js",
+    "build": "ncc build index.js --license licenses.txt"
   },
   "author": "Tim Hawkins",
   "license": "ISC",
