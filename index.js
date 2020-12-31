@@ -8,7 +8,7 @@ try {
 
   const publicVapidKey = core.getInput("public_vapid_key")
   const privateVapidKey = core.getInput("private_vapid_key")
-  const subscription = core.getInput("subscription")
+  const subscription = JSON.parse(core.getInput("subscription"))
 
   webpush.setVapidDetails(
     "mailto:test@test.com",
