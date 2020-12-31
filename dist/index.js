@@ -10,7 +10,7 @@ const core = __webpack_require__(4419)
 const github = __webpack_require__(6071)
 
 try {
-  const payload = JSON.stringify(github.context.payload, undefined, 2)
+  const payload = JSON.stringify(github.context, undefined, 2)
   console.log(`The event payload: ${payload}`)
 
   const publicVapidKey = core.getInput("public_vapid_key")
@@ -23,7 +23,7 @@ try {
     privateVapidKey
   )
 
-  const sendNotification = (dataToSend = "Github Action #2131231 Started!") => {
+  const sendNotification = (dataToSend = "No data.") => {
     webpush.sendNotification(subscription, dataToSend)
   }
 
